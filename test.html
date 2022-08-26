@@ -5,10 +5,21 @@
 </head>
 
 <body>
-    <p>Welcome to JavaScript</p>
-    <form>
-        <input type="button" value="click" onclick="msg()" />
-    </form>
+    <input id="amount">
+    <input id="vat">
+    <input id="final">
+    <button type="button" onclick="sum()">Add</button>
+    <script>
+        function sum() {
+            var w = document.getElementById('amount').value || 0;
+            var x = document.getElementById('vat').value || 0;
+            var z = +w + +x;
+            var twoPlacedFloat = parseFloat(z).toFixed(2)
+            document.getElementById('final').value = twoPlacedFloat;
+        };
+    </script>
+
+
 </body>
 
 </html>
